@@ -1,0 +1,1 @@
+export const mergeClassNames = (...args:Array<string>):string => args.join(' ');

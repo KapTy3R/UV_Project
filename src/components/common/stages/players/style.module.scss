@@ -1,0 +1,106 @@
+@import "./src/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  margin-top: 100px;
+
+  @include title;
+  color: #fff;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 22px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+
+  width: calc(100% - 10px);
+  height: 74px;
+
+  margin-top: 12px;
+  border-radius: 15px;
+
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+
+  color: #fff;
+
+  transition: .3s;
+
+  &[data-isactive='true'] {
+    .playerIcon {
+      margin-left: 26px;
+
+      width: 23px;
+      height: 28px;
+
+      background-image: url('../../../../assets/img/icons/readyUser.png');
+    }
+  }
+
+  &Disabled {
+    position: relative;
+
+    opacity: .25;
+
+    pointer-events: none;
+  }
+
+  &:first-child {
+    margin-top: 0;
+
+    border-radius: 15px;
+  }
+
+  &Icon {
+    width: 35px;
+    height: 35px;
+
+    margin-left: 22px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-image: url('../../../../assets/img/icons/addUser.png');
+  }
+
+  &Name {
+    margin-left: 20px;
+
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  &[data-isactive='true'] {
+    border: none;
+
+    .playerName {
+      color: #fff
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+  
+  margin-top: auto;
+  margin-bottom: 15px;
+}

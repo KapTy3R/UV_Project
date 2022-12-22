@@ -1,0 +1,30 @@
+.circle {
+  display: block;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  will-change: transform;
+
+  &Wrapper {
+    position: relative;
+
+    //margin-top: 14px;
+  }
+
+  &Arrow {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+
+    width: 26px;
+    height: 26px;
+
+    background-image: url('../../../../assets/img/icons/circleArrow.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

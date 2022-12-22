@@ -1,0 +1,36 @@
+@import "./src/styles/mixins";
+
+.panel {
+  position: absolute;
+  top: 18px;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  z-index: 9;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.arrow {
+  width: 15px;
+  height: 26px;
+
+  background-image: url('../../../../assets/img/icons/arrow.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  @include title;
+  color: #FFFFFF;
+}

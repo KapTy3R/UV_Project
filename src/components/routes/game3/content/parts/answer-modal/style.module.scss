@@ -1,0 +1,310 @@
+@import "../../../../../../styles/mixins";
+
+.outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 99;
+
+  background: radial-gradient(50% 50% at 50% 50%, #6BF6FF 0%, #0047FF 100%);
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin-top: 40px;
+
+  & * {
+    z-index: 99;
+  }
+}
+
+.title {
+  @include subTitle;
+  color: #FFFFFF;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 4px;
+
+  width: 100%;
+  height: 40px;
+
+  background: #FFFFFF;
+  border-radius: 50px;
+
+  @include subTitle;
+  color: #484C4F;
+}
+
+.theme {
+  margin-top: 10px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 92%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.task {
+  margin-top: 6px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 92%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.letters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 25px;
+
+  width: 100%;
+}
+
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+
+  margin-left: 4px;
+
+  height: 50px;
+
+  background: #FFF2E7;
+  border-radius: 15px;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 51px;
+  color: #484C4F;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.input {
+  margin-top: 10px;
+
+  width: 100%;
+  height: 40px;
+
+  background: #FFFFFF;
+  border-radius: 50px;
+
+  text-align: center;
+  @include subTitle;
+  color: #484C4F;
+}
+
+.btnAnswer {
+  margin-top: 20px;
+
+  width: 100%;
+
+  &Margined {
+    margin-top: auto;
+    margin-bottom: 26px;
+  }
+}
+
+.btnWord {
+  margin-top: 10px;
+
+  width: 100%;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 76px;
+
+  padding: 4px 16px 4px 4px;
+
+  border-radius: 15px;
+
+  &Border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &Icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 15px;
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 6px;
+
+    & > span:first-child {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+    & > span:nth-child(2) {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+    & > span:nth-child(3) {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+  }
+
+  &Value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: auto;
+
+    & > span:first-child {
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+
+    & > span:last-child {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.answerWrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.answerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
+
+  width: 100%;
+
+  span {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1;
+    color: #FFFFFF;
+  }
+}
+
+.answerTable {
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 50px;
+
+  height: 160px;
+  width: 100%;
+
+  &Right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    height: 100%;
+
+    background: #fff;
+    
+    transition: .3s;
+
+    &Success {
+      background: linear-gradient(180deg, #CFF100 0%, rgba(26, 185, 0, 0.99) 100%);
+    }
+
+    &Error {
+      background: linear-gradient(180deg, #FF6B00 0%, #FF2E00 100%);
+    }
+
+    @include subTitle;
+    color: #fff;
+  }
+
+  &User {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    height: 100%;
+
+    background-color: #fff;;
+
+    transition: .3s;
+
+    @include subTitle;
+    color: #484C4F;
+  }
+}

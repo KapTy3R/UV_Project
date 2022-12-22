@@ -1,0 +1,22 @@
+@import "./src/styles/mixins";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 25px;
+
+  color: #fff;
+  @include subTitle;
+
+  height: 40px;
+  min-height: 40px;
+
+  transition: .3s;
+
+  &[disabled] {
+    opacity: .5;
+    pointer-events: none;
+  }
+}

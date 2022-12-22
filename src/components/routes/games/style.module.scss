@@ -1,0 +1,94 @@
+@import "./src/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-weight: 700;
+  @include subTitle;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+}
+
+.card {
+  position: relative;
+
+  width: 140px;
+  height: 140px;
+
+  margin-top: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &Img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &Disabled {
+    pointer-events: none;
+
+    .cardImg {
+      opacity: .4;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      background-image: url('../../../assets/img/icons/lock.png');
+      background-size: 30%;
+      background-position: right bottom 5%;
+      background-repeat: no-repeat;
+
+      opacity: .75;
+
+      z-index: 9;
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 25px;
+
+  color: #fff;
+  @include subTitle;
+
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+
+  transition: .3s;
+
+  margin-top: 30px;
+
+  background: linear-gradient(180deg, #CFF100 0%, rgba(26, 185, 0, 0.99) 100%);
+
+  &[disabled] {
+    opacity: .5;
+    pointer-events: none;
+  }
+}

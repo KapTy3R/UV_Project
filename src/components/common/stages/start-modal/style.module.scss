@@ -1,0 +1,34 @@
+.bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn {
+  margin-top: 12px;
+  margin-bottom: 30px;
+
+  width: 100%;
+
+  &:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+  }
+}

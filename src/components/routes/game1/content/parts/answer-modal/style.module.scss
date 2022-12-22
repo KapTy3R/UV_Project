@@ -1,0 +1,146 @@
+@import "../../../../../../styles/mixins";
+
+.outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 99;
+
+  background: radial-gradient(50% 50% at 50% 50%, #FFD600 0%, #FF8A00 100%);
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin-top: 40px;
+
+  & * {
+    z-index: 99;
+  }
+}
+
+.title {
+  @include subTitle;
+  color: #FFFFFF;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 4px;
+
+  width: 100%;
+  height: 40px;
+
+  background: #FFFFFF;
+  border-radius: 50px;
+
+  @include subTitle;
+  color: #484C4F;
+}
+
+.theme {
+  margin-top: 10px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 92%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.task {
+  margin-top: 6px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 92%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.letters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 25px;
+
+  width: 100%;
+}
+
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+
+  margin-left: 4px;
+
+  height: 50px;
+
+  background: #FFF2E7;
+  border-radius: 15px;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 51px;
+  color: #484C4F;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.input {
+  margin-top: 10px;
+
+  width: 100%;
+  height: 40px;
+
+  background: #FFFFFF;
+  border-radius: 50px;
+
+  text-align: center;
+  @include subTitle;
+  color: #484C4F;
+}
+
+.btnAnswer {
+  margin-top: 20px;
+
+  width: 100%;
+}
+
+.btnWord {
+  margin-top: 10px;
+
+  width: 100%;
+}
